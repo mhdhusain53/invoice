@@ -57,7 +57,7 @@ const Create = (props) => {
 
 
     const onSubmitGenerate = (e) => {
-        var ddata = { id: invoiceId.length+1, partyName: data.partyName, number: data.number, date: data.date,  data:data.data,tqty:total.qty, tamount:total.amount }
+        var ddata = { id: invoiceId.length+1, partyName: data.partyName, number: data.number, date: data.date,  data:data.data,tqty:total.qty, tamount:(1.18*total.amount) }
         if (!Store()) {
             localStorage.setItem('Bill', `[${JSON.stringify(ddata)}]`)
             setData({ id: invoiceId?.length + 1, partyName: "", number: "", date: new Date(), name: "", price: 0, qty: 0, data: [] })
